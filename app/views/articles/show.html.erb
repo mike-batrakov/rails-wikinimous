@@ -1,2 +1,14 @@
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<div class="container">
+<div class="row">
+<article>
+
+<h1><%= @article.title %>
+  <%= link_to edit_article_path(@article) do %>
+       <i class="fa fa-pencil"></i>
+      <%end%>
+</h1>
+</article>
+
+
+</div>
+</div>

@@ -1,7 +1,13 @@
-<div class="collapse navbar-collapse">
-  <ul class="nav navbar-nav navbar-right">
-  <li>
-  <%= link_to "New Article", :new_article %>
-  </li>
-  </ul>
+<div class="container">
+<div class="row">
+<div class="col-sm-8 col-sm-offset-2">
+  <% @articles.each do |article| %>
+    <article>
+    <h2><%= link_to article.title, article_path(article)%></h2>
+    <p><%= article.content %></p>
+    </article>
+  <% end %>
+  </div>
 </div>
+</div>
+
